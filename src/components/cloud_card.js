@@ -1,13 +1,16 @@
 import React from 'react';
+import Question from './question';
 
 
 
 const questionStyles = {
-    color: "#1E2F97",
+    color: "#051094",
     fontFamily: "-apple-system, Roboto, sans-serif, serif",
     listStyleType: "none",
-    backgroundColor: "rgba(249,249,249,0.4)",
+    backgroundImage: "linear-gradient(35deg,rgba(250,250,250,0.6),transparent 100%)",
     cursor: "pointer",
+    padding: "1rem 2rem 1rem",
+    textAlign: "left",
   }
   
 
@@ -30,24 +33,27 @@ const data = [
 
 const Cloudcard = ()=>{
 
-   const question = data.map( (card,index) => 
+   const questions = data.map( (card,index) => 
    
-      <h1>Q{index + 1}: {card.question} </h1>
+      <h2>Q{index + 1}: {card.question} </h2>
     )
 
-    const answer = data.map( (card,index) => 
-       <p>A: {card.answer}</p>
+    const answers = data.map( (card,index) => 
+       <p> {card.answer}</p>
       ) 
 
 
 
       
     return(
-        <div style={questionStyles} onClick={}>
-           { question }
-           {/* {answer} */}
+        <div style={questionStyles} class="card">
+              <Question 
+               questions = {questions}
+               answers = {answers}
+              
+              />
+        </div>
 
-      </div>
 
     )
 }

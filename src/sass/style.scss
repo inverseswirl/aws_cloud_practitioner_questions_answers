@@ -3,6 +3,14 @@
     padding:0;
 }
 
+// $mobile_size :450px;
+
+@mixin mobile($mobile_size){
+  @media (max-width: $mobile_size) {
+      @content
+      
+  }
+}
 html,body{
     overflow:hidden;
     height:100vh;
@@ -14,9 +22,19 @@ html,body{
     color: #232129;
     padding: 96;
     font-family: -apple-system, Roboto, sans-serif, serif;
-    background-image: linear-gradient(167deg,transparent, cornflowerblue 51%, transparent 105%),url(https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-image: linear-gradient(167deg, cornflowerblue , transparent 115%),url('../images/background.jpeg');
     background-repeat:no-repeat;
     background-size: 100% 100%;
     height:100vh;
     width:100vw;
+    // color: ;
+
+    // @include mobile(450px){
+    //     background-size: 100% 100% ;
+    // }
+
+}
+
+.card{
+    transform: translateX(100px);
 }
