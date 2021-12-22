@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&family=Short+Stack&display=swap');
+
+
 *{
     margin:0;
     padding:0;
@@ -27,14 +30,57 @@ html,body{
     background-size: 100% 100%;
     height:100vh;
     width:100vw;
-    // color: ;
+  
 
-    // @include mobile(450px){
-    //     background-size: 100% 100% ;
-    // }
+}
 
+.headline{
+   position: absolute;
+   top:52%;
+   left:48%;
+   color: olive;
+   opacity:0.27;
+   font-size: 22rem;
+   font-family: 'Quicksand', sans-serif;
+   
+  
 }
 
 .card{
-    transform: translateX(100px);
+   
+    font-family: 'Quicksand', sans-serif;
+    background-image: linear-gradient(210deg,transparent, rgba(250,250,250,0.6) 100%);
+    border-radius: 50%;
+    height: 70vh;
+    width:40vw;
+    box-sizing: border-box;
+    font-size: 1.3rem;
+    color: darkblue;
+    line-height: 2rem;
+    transform: translate(27vw,12vh);
+   
+ 
 }
+
+.flip_card{
+    border-radius: 50%;
+    height: 70vh;
+    width:40vw ;
+    box-sizing: border-box;  
+    
+
+}
+
+@keyframes flip {
+    0%{
+      transform: rotateX(0deg)  translate(27vw,12vh);  
+    }
+    50%{
+      transform: rotateX(90deg)  translate(27vw,12vh);  
+    }
+   100%{
+    transform: rotateX(0deg)  translate(27vw,12vh);  
+    }
+    
+}
+

@@ -3,19 +3,22 @@ import React, { useState } from 'react';
 
 const Question = ({questions,answers})=>{
 
-    const [count,counter]= useState(0)
+    const [index,counter]= useState(0)
+    const [animate,animationStart]= useState("none")
+   
    
 // const handleClick  = e => {return console.log(e)};
 
    
 
     return(
-        <div onClick={()=>counter(count + 1) }>
-            
-         {questions[1]}
-         <br/>
-         {answers[1]}
-         {count}
+        <div onClick={()=>  counter(index + 1)}>
+         
+            {questions[index]}
+            <br/>
+            {answers[index]}
+
+      
 
          </div>
     )
