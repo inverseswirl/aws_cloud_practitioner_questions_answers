@@ -7,7 +7,7 @@ const questionStyles = {
  
     listStyleType: "none",
     cursor: "pointer",
-    padding: "12% 4% 5% 6%",
+    padding: "11% 4% 5% 6%",
     textAlign: "left",
 
   }
